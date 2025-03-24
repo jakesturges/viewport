@@ -79,7 +79,11 @@ table {
 /* --------------- BEGIN USER PREFERS DARK COLOR SCHEME QUERY --------------- */
 
 /* CHANGE THE BODY'S BACKGROUND COLOR TO THE DARK GRAY IF THE USER PREFERS DARK MODE */
-
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--dark-gray);
+    }
+}
 /* --------------- END USER PREFERS DARK COLOR SCHEME QUERY --------------- */
 
 
@@ -137,12 +141,14 @@ footer .icon{
 
 /* ----- HANDLE PREFERS REDUCED MOTION FOR THE ICON ANIMATIONS ----- */
 /* --------------- BEGIN USER PREFERS REDUCED MOTION QUERY --------------- */
+@media (prefers-reduced-motion) {
     @-webkit-keyframes icon-animation {
         0% { font-variation-settings: "TIME" 1; }
     }
     @keyframes icon-animation {
         0% { font-variation-settings: "TIME" 1; }
     }
+}
 /* --------------- END USER PREFERS REDUCED MOTION QUERY --------------- */
 
 
@@ -196,7 +202,8 @@ img{
 
 /* ---------- SMALL SCREEN STYLES ---------- */
 /* --------------- BEGIN SMALL SCREEN SIZES --------------- */
-    /* header, footer{
+@media screen and (min-width:600px) {
+    header, footer{
         background-color: var(--lime-green);
         color: var(--dark-gray);
     }
@@ -221,7 +228,8 @@ img{
     img{
         width: 200px;
         max-width: 200px;
-    } */
+    } 
+}
 /* --------------- END SMALL SCREEN SIZES --------------- */
 
 
